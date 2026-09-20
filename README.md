@@ -44,7 +44,119 @@ The design mainly consists of Base plate with Heatset Inserts and Top Plate with
 ## Cad Gallery.
 
 ![Assembly Render](<CAD/renders/Assembly Main View.png>)
-![Assembly Render](<CAD/renders/Assembly Main View.png>)
-![Assembly Render](<CAD/renders/Assembly Main View.png>)
-![Assembly Render](<CAD/renders/Assembly Main View.png>)
-![Assembly Render](<CAD/renders/Assembly Main View.png>)
+![Assembly Render](<CAD/renders/Back View.png>)
+![Assembly Render](<CAD/renders/Front View.png>)
+![Plates](<CAD/renders/Top_Plate .png>)
+![Plates](<CAD/renders/Top_Plate2.png>)
+![Plates](<CAD/renders/Base_Plate.png>)
+![Plates](<CAD/renders/Base_Plate2.png>)
+
+##  Functions
+
+| Feature | Description |
+|---------|-------------|
+|  **6 Modes** | Dev, Media, Video, Macro, Aesthetic, Games |
+|  **Whack-a-LED Game** | Press the lit switch before time runs out |
+| **DJ Mode** | Rainbow RGB animation across all 9 LEDs |
+|  **Snowfall OLED** | Idle screen shows falling snowflakes |
+|  **Rotary Encoder** | Volume control on every mode |
+| **Per-Key RGB** | 9 addressable SK6812MINI-E LEDs |
+|  **Live OLED Feedback** | Shows mode, key presses, and game score |
+
+---
+
+##  Modes
+
+Cycle modes by **long-pressing SW7** (bottom-left key).
+
+### 1. DEV — Editor & Typing
+| Key | Action |
+|-----|--------|
+| SW1–SW9 | Number keys 2–9 (numpad layout) |
+| SW7 (tap) | ESC |
+| SW7 (hold) | Next mode |
+
+### 2. MEDIA — Playback Controls
+| Key | Action |
+|-----|--------|
+| SW1 | Play / Pause |
+| SW2 | Stop |
+| SW3 | Mute |
+| SW4 | Previous Track |
+| SW6 | Next Track |
+| SW8 | Volume Down |
+| SW9 | Volume Up |
+
+### 3. VIDEO — DaVinci Resolve Editing
+| Key | Action |
+|-----|--------|
+| SW1 | Split Clip |
+| SW2 | Undo |
+| SW3 | Redo |
+| SW4 | Mark In |
+| SW5 | Mark Out |
+| SW6 | Paste Attributes |
+| SW8 | Play / Pause |
+| SW9 | Backspace |
+
+### 4. MACRO — Launcher & Productivity
+| Key | Action |
+|-----|--------|
+| SW1–SW3 | Open App 1 / 2 / 3 |
+| SW4–SW6 | Copy / Paste / Cut |
+| SW8–SW9 | Select All / Save |
+
+### 5. AESTHETIC — DJ Mode 
+RGB LEDs dance through a rotating rainbow. No key output — pure visual vibes.
+
+### 6. GAMES — Whack-a-LED 
+A random LED lights up **green**. Press its switch within **3 seconds** to score. Wrong key or timeout resets your score to 0 and flashes all LEDs red.
+
+---
+
+
+## Bill of Materials
+
+| # | Component | Qty | Source |
+|---|-----------|-----|--------|
+| 1 | Seeed XIAO RP2040 | 1 | Hack Club Kit |
+| 2 | Gateron KS-3 MX Switches | 9 | Hack Club Kit |
+| 3 | 1N4148 Through-hole Diodes | 9 | Hack Club Kit |
+| 4 | Alps EC11E Rotary Encoder | 1 | Hack Club Kit |
+| 5 | SK6812MINI-E RGB LEDs | 9 | Hack Club Kit |
+| 6 | 0.91" SSD1306 OLED Display (128×32) | 1 | Hack Club Kit |
+| 7 | White DSA Keycaps | 9 | Hack Club Kit |
+| 8 | M3×16mm Screws *(trim to 13mm)* | 4 | Hack Club Kit |
+| 9 | M3×5mm×4mm Heatset Inserts | 4 | Hack Club Kit |
+| 10 | 3D Printed Case (Base + Top Plate) | 1 set | 
+
+
+---
+
+## Firmware
+
+Written in **Python** using **KMK** on **CircuitPython**.
+
+See [`Firmware/main.py`](Firmware/main.py) for the full source.
+
+---
+
+## AI USAGE
+
+I used AI/ Online resources to learn but never automate anything. You can checkout Lapse recording from lookout too.
+
+## Credits
+
+- **[Hack Club](https://hackclub.com/)** — for the kit and the program
+- **Star Dance** — for organizing this buildathon
+- **[KMK Firmware](https://github.com/KMKfw/kmk_firmware)** — Python keyboard firmware
+- **Hack Club Hackpad team** — for the guides and KiCad care package
+- Special shoutout to Logan Peterson, whose design inspired me a lot.
+
+---
+
+##  License
+
+Open source, but you are responsible if it creates a black hole in your house.
+
+
